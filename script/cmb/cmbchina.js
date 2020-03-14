@@ -24,9 +24,9 @@ if (isGetCookie) {
         //$prefs.setValueForKey(cookie, cookieKey);
         $persistentStore.write(userAgent, userAgentKey);
         //$prefs.setValueForKey(userAgent, userAgentKey);
-        $notification.push("成功获取招商银行信用卡 cookie 🎉", "", "");
+        $notification.post("成功获取招商银行信用卡 cookie 🎉", "", "");
     } else {
-        $notification.push("获取招商银行信用卡 cookie 失败😭", "", "");
+        $notification.post("获取招商银行信用卡 cookie 失败😭", "", "");
     }
     $done({});
 } else {
