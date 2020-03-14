@@ -45,7 +45,7 @@ if (isGetCookie) {
         if (error) {
             $notification.post("招商银行信用卡签到，请求失败", "", error);
         } else {
-            const result = JSON.parse(response.body);
+            const result = JSON.parse(data);
             if (result.respCode == 1000) {
                 $notification.post("招商银行信用卡", "", "签到成功，获得 " + result.data.awardValue + " 积分🎁");
             } else if (result.respCode == 1452) {
