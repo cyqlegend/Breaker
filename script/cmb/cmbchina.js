@@ -2,8 +2,9 @@
 招商银行信用卡微信公众号：“领积分 - 🎁签到领积分” 获取 Cookie
 
 [Script]
-cron "0 9 * * *" script-path=
-https:\/\/weclub\.ccc\.cmbchina.com\/SCRMCustomActivityFront\/checkin\/request\/get-home-data\.json\?activityCode=checkin max-size=0,script-path=
+cron "* 9 * * *" debug=1,script-path=https://raw.githubusercontent.com/cyqlegend/Breaker/master/script/cmb/cmbchina.js,script-update-interval=0
+http-request ^https:\/\/weclub\.ccc\.cmbchina.com\/SCRMCustomActivityFront\/checkin\/request\/get-home-data\.json\?activityCode=checkin debug=1,script-path=https://raw.githubusercontent.com/cyqlegend/Breaker/master/script/cmb/cmbchina.js,script-update-interval=0
+https:\/\/weclub\.ccc\.cmbchina.com\/SCRMCustomActivityFront\/checkin\/request\/get-home-data\.json\?activityCode=checkin max-size=0,script-path=https://raw.githubusercontent.com/cyqlegend/Breaker/master/script/cmb/cmbchina.js,script-update-interval=0
 
 [mitm]
 hostname = weclub.ccc.cmbchina.com
